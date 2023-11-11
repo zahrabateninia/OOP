@@ -12,18 +12,25 @@ function Circle(radius){
     Object.defineProperty(this, 'defaultLocation', {
         get : function(){
             return defaultLocation;
+        },
+        set : function(value){
+            if (!value.x || !value.y){
+                throw new Error("Invalid location.");
+            }
+            defaultLocation = value;
         }
+        
     });
     
 
     
 
     this.draw = function(){
-        computeOptimumLocation(0.1);
         console.log("draw");
     };
 }
 const circle = new Circle(1);
 circle.draw();
+circle.defaultLocation = 1;
 
 circle.defaultLocation() // now we can read it, but again we can not modify it.
