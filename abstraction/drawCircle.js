@@ -1,16 +1,17 @@
 #!/usr/bin/env node 
 
 function Circle(radius){
+    let color = 'pink'; // It's not a part of object, it's a local variable
     this.radius = radius;
-    this.defaultLocation = {
+    let defaultLocation = {
         x:0,
         y:0
     };
-    this.computeOptimumLocation = function(){
+    let computeOptimumLocation = function(){
         // ...
     };
     this.draw = function(){
-        this.computeOptimumLocation;
+        computeOptimumLocation(0.1);
         console.log("draw");
     };
 }
