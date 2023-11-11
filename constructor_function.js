@@ -4,5 +4,5 @@ function Circle(radius){
         console.log("draw");
     }
 }
-
+const circle = new Circle(1);
 
